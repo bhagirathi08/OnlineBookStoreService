@@ -29,4 +29,26 @@ public class Book {
     @Column(nullable = false)
     private Double price;
     private int quantity;
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (o == this) {
+            return true;
+        }
+
+        if (!(o instanceof Book)) {
+            return false;
+        }
+
+        Book c = (Book) o;
+
+        if(c.title.equals(title) &&  c.author.equals(author)
+                && c.isbn.equals(isbn) && c.price.compareTo(price)==0
+                && c.quantity == quantity)
+            return true;
+        else
+            return false;
+
+    }
 }
