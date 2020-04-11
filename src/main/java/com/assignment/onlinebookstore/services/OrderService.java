@@ -64,6 +64,7 @@ public class OrderService implements OrderIface {
         orderResponse.setBookId(bookId);
         if(isPlaced){
             orderResponse.setStatus(ORDER_STATUS.PLACED);
+            orderResponse.setError(error);
             orderResponse.setTotalAmount(totalAmount);
         }else{
             orderResponse.setStatus(ORDER_STATUS.FAILED);
