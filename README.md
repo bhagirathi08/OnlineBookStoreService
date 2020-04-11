@@ -30,6 +30,6 @@ There are 3 controllers namely BookController where all CRUD APIS are exposed, O
   POSTGRESQL<br/>
   SPRING BOOT FRAMEWORK</br>
 
-###POSSIBLE EXTENSIONS:<br/>
+### POSSIBLE EXTENSIONS:<br/>
 1. Implement Redis Cache to reduce latency.
 2. Searching for media coverage could be improved by using elastic search.
