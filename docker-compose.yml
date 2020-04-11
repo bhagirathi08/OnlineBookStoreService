@@ -1,0 +1,16 @@
+version: "3"
+services:
+  onlinebookstore:
+    build:
+      dockerfile: Dockerfile
+      context: "."
+    ports: 
+      - "8080:8080"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    environment: 
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
