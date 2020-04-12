@@ -10,7 +10,8 @@ import javax.validation.constraints.*;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "Book")
+@Table(name = "Book", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "isbn", name = "uniqueIsbnConstraint")})
 public class Book {
 
     @Id
